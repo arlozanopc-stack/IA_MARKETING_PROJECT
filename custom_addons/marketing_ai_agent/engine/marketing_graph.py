@@ -3,12 +3,7 @@ from langgraph.graph import StateGraph, START, END
 from langchain_openai import ChatOpenAI
 from langchain_chroma import Chroma
 from langchain_openai import OpenAIEmbeddings
-from dotenv import load_dotenv
 import os
-
-# Cargar variables de entorno desde el archivo .env en la raíz del proyecto
-project_root_env = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '.env'))
-load_dotenv(project_root_env)
 
 # Definimos el estado del grafo
 class AgentState(TypedDict):
